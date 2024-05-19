@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Door } from "./components/Door";
 
 export const App = () => {
-  const [floor, setFloor] = useState(0);
+  const [room, setRoom] = useState(0);
   const onClick = () => {
-    setFloor(Math.floor(Math.random() * 100 + 1));
+    setRoom(Math.floor(Math.random() * 100 + 1));
   };
 
   return (
@@ -19,7 +19,7 @@ export const App = () => {
       <Door onClick={onClick} />
       <Door onClick={onClick} />
       <Door onClick={onClick} />
-      <p className="fixed bottom-20 text-xl text-slate-500">Floor {floor}</p>
+      <p className="fixed bottom-20 text-xl text-slate-500">Room {room}</p>
     </div>
   );
 };
